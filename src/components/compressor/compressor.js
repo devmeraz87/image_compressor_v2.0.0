@@ -82,7 +82,7 @@ const Compressor_ = () => {
                     <div className="card_heading">Image Compressor <span>v2.0.0</span></div>
                     <form onSubmit={handleSubmit} id="form">
                         <div className="_form_group">
-                            <input onChange={handleFileChange} type="file" />
+                            <input onChange={handleFileChange} type="file" accept="image/*" />
                         </div>
                         {file && (
                             <div className="_form_group">
