@@ -114,7 +114,7 @@ const Compressor_ = () => {
                     )}
                     {ImageAndDownloadLink && (
                         <div className="_download_btn">
-                            <a className="download_btn_" href={ImageAndDownloadLink} download>Download</a>
+                            <a className="download_btn_" target={"_blank"} href={ImageAndDownloadLink} download>Download</a>
                         </div>
                     )}
                 </div>
@@ -122,7 +122,7 @@ const Compressor_ = () => {
             <div className="card _meraz">
                 <div className="_dev_by">
                     <div className="_profile">
-                        <a href="https://web.facebook.com/profile.php?id=100043143293016">
+                        <a target={"_blank"} href="https://web.facebook.com/profile.php?id=100043143293016">
                             <div className="My_img">
                                 <img src={profile} alt="" />
                             </div>                            
