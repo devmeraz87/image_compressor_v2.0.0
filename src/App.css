@@ -28,9 +28,9 @@
   flex-basis: 724px;
   flex-grow: 1;
   flex-shrink: 1;
-  box-shadow: 2px 5px 20px #ccc;
+  box-shadow: 2px 5px 20px rgba(150, 195, 255, 0.507);
   border-radius: 3px;
-  background-color: rgba(152, 212, 247, 0.342);
+  background-color: rgba(125, 195, 236, 0.342);
   background-color: #fff;
 }
 
@@ -54,6 +54,10 @@
   display: block;
   font-size: 14px;
   color: #444;
+}
+
+._file {
+  cursor: pointer;
 }
 
 .form_control {
@@ -95,8 +99,14 @@
 
 
 ._size {
-  margin-left: 0.75rem;
   vertical-align: bottom;
+  display: inline-block;
+  background-color: rgb(145, 171, 226);
+  color: #fff;
+  padding: 0.75rem;
+  margin-left: 2px;
+  border-radius: 40px 3px;
+  font-size: 0.9rem;
 }
 
 ._meraz {
@@ -170,6 +180,27 @@
   background-color: rgba(153, 153, 153, 0.301);
 }
 
+._loading_div {
+  height: 300px;
+  width: 300px;
+  background-color: #444;
+  transition: 0.3s;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+._loading_div img {
+  vertical-align: middle;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  filter: blur(10px);
+}
+
 @media(max-width: 724px) {
   ._wrapper {
     padding-top: 0.75rem;
@@ -181,9 +212,6 @@
     object-fit: cover;
   }
 
-  ._size {
-    margin-left: 0;
-  }
 
   ._footer p {
     font-size: 14px;

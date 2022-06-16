@@ -52,6 +52,7 @@ const Compressor_ = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
+        setImageAndDownloadLink(null);
 
         const options = {
             maxSizeMB: maxMb,
@@ -82,7 +83,7 @@ const Compressor_ = () => {
                     <div className="card_heading">Image Compressor <span>v2.0.0</span></div>
                     <form onSubmit={handleSubmit} id="form">
                         <div className="_form_group">
-                            <input onChange={handleFileChange} type="file" accept="image/*" />
+                            <input className="_file" onChange={handleFileChange} type="file" accept="image/*" />
                         </div>
                         {file && (
                             <div className="_form_group">
@@ -102,11 +103,21 @@ const Compressor_ = () => {
                             </div>
                         )}
                     </form>   
-                    {ImageAndDownloadLink && (
+                    {file && (
                         <div className="_image_blob">
                             <div className="_blob_container">
-                                <img src={ImageAndDownloadLink} alt="" />
-                                {size && (
+                                {ImageAndDownloadLink ? (
+                                <>
+                                    <img src={ImageAndDownloadLink} alt="" />
+                                </>
+                                ) : (
+                                <>
+                                    <div className="_loading_div">
+                                        <img src={profile} alt="" />
+                                    </div>
+                                </>
+                                )}
+                                {ImageAndDownloadLink && (
                                     <span className="_size" >{size}</span>
                                 )}
                             </div>
