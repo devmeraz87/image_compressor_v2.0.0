@@ -213,6 +213,11 @@
     object-fit: cover;
   }
 
+  ._loading_div {
+    height: 250px;
+    width: 250px;
+  }
+
 
   ._footer p {
     font-size: 14px;
