@@ -82,6 +82,21 @@
   background-color: transparent;
   color: #444;
   cursor: pointer;
+  user-select: none;
+}
+
+._reset_btn_ {
+  height: 36px;
+  padding: 0 28px;
+  border: none;
+  border-radius: 3px;
+  margin-left: 0.75rem;
+  margin-top: 0.75rem;
+  background-color: #fff;
+  box-shadow: 3px 5px 10px rgb(152, 212, 247);
+  text-shadow: 2px 2px 2px rgb(152, 212, 247);
+  cursor: pointer;
+  user-select: none;
 }
 
 .apply_btn {
@@ -95,6 +110,7 @@
   vertical-align: middle;
   border-radius: 3px;
   background-color: rgba(152, 212, 247, 0.342);
+  cursor: pointer;
 }
 
 
@@ -108,6 +124,75 @@
   margin-top: 2px;
   border-radius: 40px 3px;
   font-size: 0.9rem;
+}
+
+
+._full_img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(68, 68, 68, 0.583);
+}
+
+._full_img ._full_image_container {
+  height: 80%;
+  width: 80%;
+}
+
+
+._full_img ._full_image_container img {
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  box-shadow: 2px 5px 20px rgb(95, 97, 97);
+  background-color: rgb(120, 151, 185);
+  border-radius: 3px;
+  user-select: none;
+}
+
+
+._full_img ._full_img_close_btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background-color: #ccc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+._full_img ._full_img_close_btn ._close_btn_icon {
+  position: relative;
+  height: 3px;
+  width: 100%;
+  background-color: #444;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+._full_img ._full_img_close_btn ._close_btn_icon::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #444;
+  transform: rotate(90deg);
 }
 
 ._meraz {
@@ -138,6 +223,7 @@
   border-radius: 30%;
   object-fit: cover;
   box-shadow: 0px 0px 0 0.25rem rgba(152, 212, 247, 0.342);
+  vertical-align: middle;
 }
 
 ._devlop {

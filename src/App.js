@@ -12,7 +12,7 @@ function App() {
           </div>
           <footer className='_footer'>
             <div className="_footer_top_border"></div>
-            <p>Copyright &copy; by <a href="https://web.facebook.com/profile.php?id=100043143293016">Mevlan Meraj</a> || {`${new Date().getFullYear()}__💔`}</p>
+            <p>Copyright &copy; by <a target={"_blank"} rel={"noreferrer"} href="https://web.facebook.com/profile.php?id=100043143293016">Mevlan Meraj</a> || {`${new Date().getFullYear()}__💔`}</p>
           </footer>
         </div>
 
