@@ -98,6 +98,7 @@ const Compressor_ = () => {
         setMbChange(null);
         setImageAndDownloadLink(null);
         setWidthAndHeightChange(null);
+        setMaxWidthAndHeight(1920)
     }
 
     return (
