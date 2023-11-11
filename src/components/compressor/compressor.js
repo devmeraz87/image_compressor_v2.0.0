@@ -17,7 +17,7 @@ const Compressor_ = () => {
     const [maxWidthandHeight, setMaxWidthAndHeight] = useState(1920);
     const [ImageAndDownloadLink, setImageAndDownloadLink] = useState(null);
     const [widthAndHeightChange, setWidthAndHeightChange] = useState(null);
-
+const [fileName, setFileName] = useState("compressed__img__mt.jpg)
     // File Mb value change_
     const handleMb = (e) => {
         const value = e.target.value;
@@ -74,6 +74,7 @@ const Compressor_ = () => {
                 const compressFile = await imageCompression(file, options);
                 const blob = URL.createObjectURL(compressFile);
                 setImageAndDownloadLink(blob)
+setFileName(file.name)
                 setSize((compressFile.size / 1024).toFixed(2) + " kbs")
     
             } catch(err) {
@@ -151,7 +152,7 @@ const Compressor_ = () => {
                     {ImageAndDownloadLink && (
                         <div style={{display: "flex", alignItems: "center"}}>
                             <div className="_download_btn">
-                                <a className="download_btn_" href={ImageAndDownloadLink} download>Download</a>
+                                <a className="download_btn_" href={ImageAndDownloadLink} download={fileName}>Download</a>
                             </div>
                             <div className="_reset_btn">
                                 <button className="_reset_btn_" onClick={handleFromReset}>Reset</button>
