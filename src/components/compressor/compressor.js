@@ -17,7 +17,9 @@ const Compressor_ = () => {
     const [maxWidthandHeight, setMaxWidthAndHeight] = useState(1920);
     const [ImageAndDownloadLink, setImageAndDownloadLink] = useState(null);
     const [widthAndHeightChange, setWidthAndHeightChange] = useState(null);
-const [fileName, setFileName] = useState("compressed__img__mt.jpg)
+const [fileName, setFileName] = useState("compressed__img__mt.jpg")
+
+
     // File Mb value change_
     const handleMb = (e) => {
         const value = e.target.value;
