@@ -51,6 +51,7 @@ const [fileName, setFileName] = useState("compressed__img__mt.jpg")
                 const compressFile = await imageCompression(file, options);
                 const blob = URL.createObjectURL(compressFile);
                 setImageAndDownloadLink(blob)
+setFileName(file.name)
                 setSize((compressFile.size / 1024).toFixed(2) + " kbs")
     
             } catch(err) {
